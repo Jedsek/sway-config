@@ -1,0 +1,9 @@
+mode=run
+insensitive=true
+prompt=Typing something...
+width=700
+height=500
+term=alacritty
+hide_scroll=true
+location=2
+yoffset=50
