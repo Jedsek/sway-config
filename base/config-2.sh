@@ -16,5 +16,3 @@ yes " " | sudo pacman -S yay
 echo "==========================================================================================================================================================="
 echo "[SCRIPT] 正在安装蓝牙相关, bluez, bluez-utils..."
 yes " " | yay -S bluez, bluez-utils
-echo "[SCRIPT] 请确认开启蓝牙相关服务..."
-systemctl start bluetooth.service
