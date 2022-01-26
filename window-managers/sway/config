@@ -22,7 +22,7 @@ font Fira Code 14
 
 
 ## For_window
-
+for_window [floating] border none
 
 ## Input
 # Run `swaymsg -t get_inputs` to get the names of your inputs
