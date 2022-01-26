@@ -9,7 +9,7 @@
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 set $wallpapers ~/.config/sway/wallpapers/
-set $scripts ~/.config/sway/scripts/
+set $scripts    ~/.config/sway/scripts/
 
 
 ## Beauty
@@ -70,16 +70,16 @@ mode "print-screen" {
 }
 mode "print-window" {
     ## Save && Copy
-    bindsym s exec $scripts/grimshot/save/window.sh
-    bindsym c exec $scripts/grimshot/copy/window.sh
+    bindsym s exec sh $scripts/grimshot/save/window.sh
+    bindsym c exec sh $scripts/grimshot/copy/window.sh
     
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
 mode "print-full" {
     ## Save && Copy
-    bindsym s exec $scripts/grimshot/save/full.sh
-    bindsym c exec $scripts/grimshot/copy/full.sh
+    bindsym s exec sh $scripts/grimshot/save/full.sh
+    bindsym c exec sh $scripts/grimshot/copy/full.sh
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -88,11 +88,14 @@ mode "print-full" {
 
 bindsym $mod+o mode "record-screen"
 mode "record-screen" {
+    ## You can type ` ps -ef | awk '/[w]f-recorder/{print $2}' `,
+    ## to see the pid(s) of recorder(s).
+    
     # Full
-    bindsym f exec $scripts/wf-recorder/full.sh
+    bindsym f exec sh $scripts/wf-recorder/full.sh
 
     # Full + Audio
-    bindsym a exec $scripts/wf-recorder/full-audio.sh
+    bindsym a exec sh $scripts/wf-recorder/full-audio.sh
 
     # Stop
     bindsym s exec sh $scripts/wf-recorder/stop.sh
