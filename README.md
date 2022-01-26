@@ -6,7 +6,7 @@ Jedsek的sway-linux配置, 及相关的帮助脚本
 
 ```bash
 cd ~
-git clone https://github.com/jedsek/sway-config  # 速度慢可以改成 `github.com.cnpmjs.org` 或 `hub.fastgit.org`
+git clone https://github.com/jedsek/sway-config  # 速度慢可以改成 `github.com.cnpmjs.org` 或 `gitee.com`
 sh ~/sway-config/total-script.sh
 ```
 
