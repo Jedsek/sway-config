@@ -12,7 +12,7 @@ yes " " | yay -S sway swaylock brightnessctl
 
 ## Sway
 mkdir -p ~/.config/sway/wallpapers
-cp -r  $path/wallpapers/  ~/.config/sway/
+cp     $path/wallpapers/  ~/.config/sway/
 cp     $path/config       ~/.config/sway/
 
 
