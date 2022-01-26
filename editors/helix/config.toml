@@ -1,1 +1,5 @@
 theme = "nord"
+
+[editor]
+line-number = "relative"
+scrolloff = 0
