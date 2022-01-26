@@ -1,6 +1,6 @@
 mode=run
 insensitive=true
-prompt=Type something...
+prompt=Type to search
 width=670
 height=600
 term=alacritty
