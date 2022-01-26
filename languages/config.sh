@@ -2,7 +2,7 @@
 
 echo "==========================================================================================================================================================="
 echo "[SCRIPT] 正在安装rust..."
-echo ""
+xdotool key return
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 touch ~/.cargo/config
 cat > ~/.cargo/config << EOF
