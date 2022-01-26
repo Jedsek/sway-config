@@ -13,7 +13,7 @@ unsetopt prompt_cr prompt_sp
 
 
 export ZSH=$HOME/.oh-my-zsh
-export EDITOR="nvim"
+export EDITOR="helix"
 
 
 # Set name of the theme to load --- if set to "random", it will
