@@ -2,6 +2,6 @@
 
 yes " " | yay -S helix
 
-helix_path=~/sway-config/editors/helix
-mkdir -p ~/.config/helix/themes/
-cp $helix_path/config.toml ~/.config/helix/
+path=~/sway-config/editors/helix
+cp -r $path/ ~/.config/
+rm    ~/.config/helix/config.sh
