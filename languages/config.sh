@@ -2,8 +2,9 @@
 
 echo "==========================================================================================================================================================="
 echo "[SCRIPT] 正在安装rust..."
-xdotool key return
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > rustup.sh
+yes " " | sh rustup.sh
+rm rustup.sh
 touch ~/.cargo/config
 cat > ~/.cargo/config << EOF
 [source.crates-io]
