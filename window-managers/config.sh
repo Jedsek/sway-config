@@ -17,7 +17,6 @@ cp     $path/config       ~/.config/sway/
 
 
 ## Plugins
-# autotiling-rs
 sh $path/scripts/config.sh
 
 
