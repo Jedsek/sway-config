@@ -1,9 +1,10 @@
 mode=run
 insensitive=true
-prompt=Typing something...
-width=700
-height=500
+prompt=Type something...
+width=670
+height=600
 term=alacritty
 hide_scroll=true
-location=2
-yoffset=50
+location=1
+xoffset=0
+yoffset=0
