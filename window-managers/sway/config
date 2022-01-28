@@ -33,7 +33,7 @@ smart_gaps on
 smart_borders on
 default_border pixel 6
 client.focused "#4c7899" "#285577" "#ffffff" "#2e9ef4" "#EEEE00"
-font Fira Code 14
+font pango:Fira Code 14
 
 
 ## For_window
