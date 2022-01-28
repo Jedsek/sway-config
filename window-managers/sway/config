@@ -4,25 +4,42 @@
 
 
 
+## Others
+xwayland enable
+focus_follows_mouse yes
+
 
 ## Variables
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 set $wallpapers ~/.config/sway/wallpapers/
 set $scripts    ~/.config/sway/scripts/
+set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
+
+
+## Exec
+exec fcitx5 -d
+exec_always $scripts/autotiling-rs
+exec_always mako
+exec notify-send "Welcome to sway-wm!"
+exec mkfifo $WOBSOCK && tail -f $WOBSOCK | wob -a bottom -M 15
 
 
 ## Beauty
 output * bg $wallpapers/Sway_Wallpaper_Blue_1920x1080.png fill
 gaps inner 8
 gaps outer 8
+smart_gaps on
+smart_borders on
 default_border pixel 6
 client.focused "#4c7899" "#285577" "#ffffff" "#2e9ef4" "#EEEE00"
 font Fira Code 14
 
 
 ## For_window
-for_window [floating] border none
+for_window [floating]                 border none
+for_window [window_role="pop-up"]     floating enable
+
 
 ## Input
 # Run `swaymsg -t get_inputs` to get the names of your inputs
@@ -44,21 +61,14 @@ input type:pointer {
 seat seat0 hide_cursor when-typing enable
 
 
-## Exec
-exec fcitx5 -d
-exec_always $scripts/autotiling-rs
-exec_always mako
-exec notify-send -a "sway" "Welcome to sway-wm!"
-
-
 ## Binding
-bindsym --locked XF86AudioRaiseVolume exec amixer sset Master 5%+
-bindsym --locked XF86AudioLowerVolume exec amixer sset Master 5%-
-bindsym --locked  XF86AudioMute       exec amixer sset Master toggle
+bindsym --locked XF86AudioRaiseVolume exec amixer sset Master 5%+     | sed -En 's/.*\[([0-9]+)%\].*/\1/p' | head -1 > $WOBSOCK
+bindsym --locked XF86AudioLowerVolume exec amixer sset Master 5%-     | sed -En 's/.*\[([0-9]+)%\].*/\1/p' | head -1 > $WOBSOCK
+bindsym --locked  XF86AudioMute       exec amixer sset Master toggle  | sed -En '/\[on\]/ s/.*\[([0-9]+)%\].*/\1/ p; /\[off\]/ s/.*/0/p' | head -1 > $WOBSOCK
 
-bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
-bindsym XF86MonBrightnessUp   exec brightnessctl set +10%
 
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%- | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
+bindsym XF86MonBrightnessUp exec brightnessctl set 10%+   | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
 bindsym $mod+p mode "print-screen"
 mode "print-screen" {
     ## Mode
@@ -113,7 +123,6 @@ mode "record-screen" {
     bindsym Escape mode "default"
  }
     
-xwayland enable
 
 set $left h
 set $down j
