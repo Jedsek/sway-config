@@ -64,7 +64,8 @@ mode "print-screen" {
     ## Mode
     bindsym f mode "print-full"
     bindsym w mode "print-window"
-    
+    bindsym a mode "print-area"
+
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
@@ -72,7 +73,7 @@ mode "print-window" {
     ## Save && Copy
     bindsym s exec sh $scripts/grimshot/save/window.sh
     bindsym c exec sh $scripts/grimshot/copy/window.sh
-    
+
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
@@ -80,6 +81,14 @@ mode "print-full" {
     ## Save && Copy
     bindsym s exec sh $scripts/grimshot/save/full.sh
     bindsym c exec sh $scripts/grimshot/copy/full.sh
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+mode "print-area" {
+    ## Save && Copy
+    bindsym s exec sh $scripts/grimshot/save/area.sh
+    bindsym c exec sh $scripts/grimshot/copy/area.sh
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -104,7 +113,7 @@ mode "record-screen" {
     bindsym Escape mode "default"
  }
     
-
+xwayland enable
 
 set $left h
 set $down j
