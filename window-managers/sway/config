@@ -57,7 +57,7 @@ input type:pointer {
 
 
 ## Seat
-seat seat0 hide_cursor when-typing enable
+seat seat0 hide_cursor 850
 
 
 ## Binding
