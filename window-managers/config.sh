@@ -7,7 +7,7 @@ path=~/sway-config/window-managers/sway
 
 ## Install some tools
 yes " " | yay -S otf-font-awesome
-yes " " | yay -S sway swaylock brightnessctl
+yes " " | yay -S sway swaylock brightnessctl wob
 
 
 ## Sway
