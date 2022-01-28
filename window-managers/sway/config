@@ -44,7 +44,7 @@ for_window [window_role="pop-up"]     floating enable
 # Run `swaymsg -t get_inputs` to get the names of your inputs
 # Read `man 5 sway-input` for more information
 input type:touchpad {
-    dwt enabled
+    dwt disabled
     tap enabled
     natural_scroll enabled
     middle_emulation enabled
@@ -57,7 +57,7 @@ input type:pointer {
 
 
 ## Seat
-seat seat0 hide_cursor 850
+seat seat0 hide_cursor when-typing enable
 
 
 ## Binding
