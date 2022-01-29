@@ -21,7 +21,7 @@ set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 exec fcitx5 -d
 exec_always $scripts/autotiling-rs
 exec_always mako
-exec notify-send -a " " "Welcome to sway-wm!"
+exec notify-send -a " " "     Welcome to sway-wm\!"
 exec mkfifo $WOBSOCK && tail -f $WOBSOCK | wob -a bottom -M 15
 
 
