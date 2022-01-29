@@ -269,10 +269,10 @@ bindsym $mod+r mode "resize"
 mode "resize" {
     # grow    : down && right
     # shrink  : up   && down
-    bindsym $left resize shrink width 25px
-    bindsym $down resize shrink height 25px
-    bindsym $up resize grow height 25px
-    bindsym $right resize grow width 25px
+    bindsym $left resize shrink width 30px
+    bindsym $down resize shrink height 30px
+    bindsym $up resize grow height 30px
+    bindsym $right resize grow width 30px
 
     # Return to default mode
     bindsym Return mode "default"
