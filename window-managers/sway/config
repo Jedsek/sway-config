@@ -38,7 +38,10 @@ font pango:Fira Code 14
 ## Rules && Assignments
 for_window [floating]                   border none
 for_window [window_role="pop-up"]       floating enable
+for_window [instance="feh"]             floating enable
+for_window [title="DevSidecar"]         move scratchpad
 for_window [workspace="2|3"]            layout tabbed
+
 assign [instance="Alacritty"]           1
 assign [app_id="firefox"]               2
 assign [instance="Steam"]               3
