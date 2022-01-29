@@ -5,7 +5,6 @@
 
 
 ## Others
-xwayland enable
 focus_follows_mouse yes
 
 
@@ -19,10 +18,10 @@ set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 
 ## Exec
 exec fcitx5 -d
-exec_always $scripts/autotiling-rs
-exec_always mako
 exec notify-send -a " " "     Welcome to sway-wm!"
 exec mkfifo $WOBSOCK && tail -f $WOBSOCK | wob -a bottom -M 15
+exec_always $scripts/autotiling-rs -w 1
+exec_always mako
 
 
 ## Beauty
@@ -36,9 +35,13 @@ client.focused "#4c7899" "#285577" "#ffffff" "#2e9ef4" "#EEEE00"
 font pango:Fira Code 14
 
 
-## For_window
-for_window [floating]                 border none
-for_window [window_role="pop-up"]     floating enable
+## Rules && Assignments
+for_window [floating]                   border none
+for_window [window_role="pop-up"]       floating enable
+for_window [workspace="2|3"]            layout tabbed
+assign [instance="Alacritty"]           1
+assign [app_id="firefox"]               2
+assign [instance="Steam"]               3
 
 
 ## Input
