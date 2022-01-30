@@ -19,7 +19,7 @@ set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 ## Exec
 exec fcitx5 -d
 exec notify-send -a " " "     Welcome to sway-wm!"
-exec mkfifo $WOBSOCK && tail -f $WOBSOCK | wob -a bottom -M 15
+exec_always mkfifo $WOBSOCK && tail -f $WOBSOCK | wob -a bottom -M 15
 exec_always $scripts/autotiling-rs -w 1
 exec_always mako
 
@@ -190,8 +190,7 @@ exec swayidle -w \
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+e exec swaynag -t warning -m 'Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
-
-
+    
 
 # Moving around:
     # Move your focus around
@@ -241,8 +240,6 @@ exec swayidle -w \
     bindsym $mod+v splitv
 
     # different layout styles
-    bindsym $mod+m layout tabbed
-    bindsym $mod+t layout toggle split
 
     # fullscreen
     bindsym $mod+f fullscreen
