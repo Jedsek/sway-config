@@ -33,7 +33,7 @@ EOF
 yes " " | sudo pacman -Syyu
 yes " " | sudo pacman -S archlinuxcn-keyring
 yes " " | sudo pacman -S base-devel
-yes " " | sudo pacman -S net-tools iproute2
+yes " " | sudo pacman -S net-tools iproute2 iputils
 
 # 调用manjaro-config/fcitx5下的脚本, 安装fcitx5并进行自动地配置主题配置, 字体选择等
 # 在这调用是为了让你重启之后就能直接使用输入法了
