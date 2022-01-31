@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
-
-echo "==========================================================================================================================================================="
-echo "[SCRIPT] 正在安装rust..."
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > rustup.sh
 yes " " | sh rustup.sh
 rm rustup.sh
