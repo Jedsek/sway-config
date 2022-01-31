@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-yes " " | yay -S visual-studio-code-bin
