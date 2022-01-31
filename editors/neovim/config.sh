@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-yes " " | yay -S neovim
+yes " " | yay -S vim neovim
