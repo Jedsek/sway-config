@@ -1,10 +1,18 @@
 #!/usr/bin/env bash
 yes " " | yay -S grim slurp jq scdoc wl-clipboard
+yes " " | yay -S i3ipc-python
 yes " " | yay -S wf-recorder
+
 
 path=~/.config/sway/scripts
 
 cp -r ~/sway-config/window-managers/sway/scripts/ ~/.config/sway/
 rm    $path/config.sh
 
-chmod +x $path/autotiling-rs
+for file in $path/*
+do
+  if [ -f $file ]
+  then 
+    chmod +x $file
+  fi
+done
