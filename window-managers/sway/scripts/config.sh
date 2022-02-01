@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 yes " " | yay -S grim slurp jq scdoc wl-clipboard
-yes " " | yay -S i3ipc-python
+yes " " | yay -S python-ipc
 yes " " | yay -S wf-recorder
 
 
