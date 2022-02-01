@@ -6,3 +6,5 @@ sudo npm install -g npm hexo
 yes " " | yay -S vlc mpv tree fd bat exa ripgrep axel
 yes " " | yay -S neofetch feh geary xdotool
 yes " " | yay -S steam dingtalk
+
+git config --global url."https://github.com.cnpmjs.org/".instendOf "https://github.com/"
