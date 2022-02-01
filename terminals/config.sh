@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-path=~/sway-config
-for file in $path/terminals/*
+path=~/sway-config/terminals
+for file in $path/*
 do
   if [ -d "$file" ]
   then
