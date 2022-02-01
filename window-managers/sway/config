@@ -21,7 +21,7 @@ exec fcitx5 -d
 exec notify-send -a " " "     Welcome to sway-wm!"
 exec mkfifo $WOBSOCK && tail -f $WOBSOCK | wob -a bottom -M 15
 exec mako
-exec_always $scripts/inactive-windows-transparency.py -o 0.86
+exec $scripts/inactive-windows-transparency.py -o 0.86
 exec_always $scripts/autotiling-rs -w 1
 
 ## Beauty
