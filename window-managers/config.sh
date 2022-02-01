@@ -20,6 +20,10 @@ cp     $path/config       ~/.config/sway/
 sh $path/scripts/config.sh
 
 
+## Bin
+sh $path/bin/config.sh
+
+
 ## Waybar
 sh $path/waybar/config.sh
 
