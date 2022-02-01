@@ -13,7 +13,7 @@ unsetopt prompt_cr prompt_sp
 
 
 export ZSH=$HOME/.oh-my-zsh
-export EDITOR="helix"
+export EDITOR="nvim"
 
 
 # Set name of the theme to load --- if set to "random", it will
@@ -137,6 +137,6 @@ alias e="exa"
 
 alias n="nvim"
 alias co="cargo"
-alias h="hexo"
+alias ho="hexo"
 alias ra="ranger"
 alias hx="helix"
