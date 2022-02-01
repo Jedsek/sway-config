@@ -19,10 +19,10 @@ set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 ## Exec
 exec fcitx5 -d
 exec notify-send -a " " "     Welcome to sway-wm!"
-exec_always mkfifo $WOBSOCK && tail -f $WOBSOCK | wob -a bottom -M 15
+exec mkfifo $WOBSOCK && tail -f $WOBSOCK | wob -a bottom -M 15
+exec mako
+exec_always $scripts/inactive-windows-transparency.py -o 0.86
 exec_always $scripts/autotiling-rs -w 1
-exec_always mako
-
 
 ## Beauty
 output * bg $wallpapers/Sway_Wallpaper_Blue_1920x1080.png fill
