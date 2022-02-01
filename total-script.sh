@@ -2,9 +2,13 @@
 
 path=~/sway-config/
 
-sh $path/base/config-1.sh
-sh $path/base/config-2.sh
-sh $path/base/config-3.sh
+for file in $path/base/*
+do
+  if [ -f $file ]
+  then 
+    sh $file
+  fi
+done
 
 sh $path/shells/config.sh
 sh $path/terminals/config.sh
