@@ -1,10 +1,20 @@
 #!/usr/bin/env bash
-path=~/sway-config
-for file in $path/languages/*
-do 
-  if [[ -f "$file" && $file != "$path/languages/config.sh" ]]
-  then
-    sh $file
-  fi
-done
-    
+
+# rust
+{curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh}&{xdotool key return}
+touch ~/.cargo/config
+cat > ~/.cargo/config << EOF
+[source.crates-io]
+registry = "https://github.com/rust-lang/crates.io-index"
+replace-with = 'ustc'
+[source.ustc]
+registry = "git://mirrors.ustc.edu.cn/crates.io-index"
+EOF
+yes " " | yay -S rust-analyzer
+
+# vala
+yes " " | yay -S vala
+yes " " | yay -S vala-language-server
+
+# lua
+yes " " | yay -S lua-language-server
