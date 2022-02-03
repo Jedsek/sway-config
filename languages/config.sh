@@ -18,3 +18,9 @@ yes " " | yay -S vala-language-server
 
 # lua
 yes " " | yay -S lua-language-server
+
+# bash
+yes " " | yay -S bash-language-server
+
+# css
+npm i -g vscode-langservers-extracted
