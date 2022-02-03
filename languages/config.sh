@@ -24,3 +24,7 @@ yes " " | yay -S bash-language-server
 
 # css
 npm i -g vscode-langservers-extracted
+
+# typescript
+npm i -g typescript 
+npm i -g typescript-language-server
