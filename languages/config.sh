@@ -2,8 +2,8 @@
 
 # rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > ./rustup.sh
-chmod +x ./rustup.sh
-echo | ./rustup.sh
+sudo chmod +x ./rustup.sh
+sudo echo | ./rustup.sh
 rm ./rustup.sh
 touch ~/.cargo/config
 cat > ~/.cargo/config << EOF
