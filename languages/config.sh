@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
 # rust
-{curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh}&{xdotool key return}
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > ./rustup.sh
+chmod +x ./rustup.sh
+echo | ./rustup.sh
+rm ./rustup.sh
 touch ~/.cargo/config
 cat > ~/.cargo/config << EOF
 [source.crates-io]
@@ -23,11 +26,11 @@ yes " " | yay -S lua-language-server
 yes " " | yay -S bash-language-server
 
 # css
-npm i -g vscode-langservers-extracted
+sudo npm i -g vscode-langservers-extracted
 
 # typescript
-npm i -g typescript 
-npm i -g typescript-language-server
+sudo npm i -g typescript 
+sudo npm i -g typescript-language-server
 
 # vimscript
-npm i -g vim-language-server
+sudo npm i -g vim-language-server
