@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
 # rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > ./rustup.sh
-sudo chmod +x ./rustup.sh
-sudo echo | ./rustup.sh
-rm ./rustup.sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 touch ~/.cargo/config
 cat > ~/.cargo/config << EOF
 [source.crates-io]
