@@ -3,6 +3,7 @@
 # rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > ./rustup.sh
 sh ./rustup.sh -y
+rm ./rustup.sh
 touch ~/.cargo/config
 cat > ~/.cargo/config << EOF
 [source.crates-io]
